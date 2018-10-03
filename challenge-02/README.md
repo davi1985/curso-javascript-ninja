@@ -34,8 +34,8 @@ addValor();
 
 // Qual o retorno da função? (Use comentários de bloco).
 /*
-Como retorno da função obtivemos a saida: 'O valor 
-da variável agora é : 25 
+Como retorno da função obtivemos a saida: 'O valor
+da variável agora é : 25
 */
 
 /*
@@ -93,4 +93,6 @@ threeArgs(); //false
 threeArgs(1); // 1
 threeArgs(1,2) // 3
 threeArgs(1,2,3) //1
+
+//exercicio concluido
 ```
