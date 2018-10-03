@@ -198,4 +198,7 @@ pessoa.apresentacao = function() {
 // Agora, apresente-se ;)
 pessoa.apresentacao();
 //Olá, eu sou o Davi Silva, tenho 36 anos, 1.6m, meu peso é 90 e, só hoje, eu já caminhei 700 metros!"
+
+
+//exercicio concluido
 ```
