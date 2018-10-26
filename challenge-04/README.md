@@ -115,13 +115,14 @@ poucos.
 */
 carro.adicionarPessoas = function( numeroPessoas ) {
     var totalPessoas = carro.quantidadePessoas + numeroPessoas;
+    var quantasPessoasCabem = carro.assentos - carro.quantidadePessoas;
+        var pluralOuSingular = quantasPessoasCabem === 1 ? 'pessoa' : 'pessoas';
+        
     if(carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) {
         return 'O carro já está lotado';
     }
     
     if( totalPessoas  > carro.assentos) {
-        var quantasPessoasCabem = carro.assentos - carro.quantidadePessoas;
-        var pluralOuSingular = quantasPessoasCabem === 1 ? 'pessoa' : 'pessoas';
         return 'Só cabem mais ' + quantasPessoasCabem + pluralOuSingular + '!';
     }
 
