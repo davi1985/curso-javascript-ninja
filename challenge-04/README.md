@@ -36,7 +36,7 @@ isTruthy([]);
 isTruthy(function() {});
 isTruthy([]);
 isTruthy({});
-isTruthy('Curso JS Ninja);
+isTruthy('Curso JS Ninja');
 isTruthy(30*2);
 isTruthy(10+2);
 isTruthy({a:1, b:2});
@@ -108,23 +108,25 @@ seguintes características:
 número não precisa encher o carro, você poderá acrescentar as pessoas aos
 poucos.
 - O método deve retornar a frase: "Já temos [X] pessoas no carro!"
-- Se o carro já estiver cheio, com todos os assentos já preenchidos, o método
-deve retornar a frase: "O carro já está lotado!"
-- Se ainda houverem lugares no carro, mas a quantidade de pessoas passadas por
-parâmetro for ultrapassar o limite de assentos do carro, então você deve
-mostrar quantos assentos ainda podem ser ocupados, com a frase:
+- Se o carro já estiver cheio, com todos os assentos já preenchidos, o método deve retornar a frase: "O carro já está lotado!"
+- Se ainda houverem lugares no carro, mas a quantidade de pessoas passadas por parâmetro for ultrapassar o limite de assentos do carro, então você deve mostrar quantos assentos ainda podem ser ocupados, com a frase:
 "Só cabem mais [QUANTIDADE_DE_PESSOAS_QUE_CABEM] pessoas!"
-- Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
-citado acima, no lugar de "pessoas".
+- Se couber somente mais uma pessoa, mostrar a palavra pessoa" no retorno citado acima, no lugar de "pessoas".
 */
-carro.pessoasNoCarro = function(i) {
-    carro.quantidadePessoas += i;
-    // return 'Já temos '+ carros.quantidadePessoas + ' pessoas no carros';
-    // if(carros.quantidadePessoas >= 6) {
-        // return 'O carro já está lotado';
-    // }else {
-        // return 'Só cabem mais' + carros.assentos - carros.quantidadePessoas + 'no carro';
-    // }
+carro.adicionarPessoas = function( numeroPessoas ) {
+    var totalPessoas = carro.quantidadePessoas + numeroPessoas;
+    if(carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) {
+        return 'O carro já está lotado';
+    }
+    
+    if( totalPessoas  > carro.assentos) {
+        var quantasPessoasCabem = carro.assentos - carro.quantidadePessoas;
+        var pluralOuSingular = quantasPessoasCabem === 1 ? 'pessoa' : 'pessoas';
+        return 'Só cabem mais ' + quantasPessoasCabem + pluralOuSingular + '!';
+    }
+
+    carro.quantidadePessoas += numeroPessoas;
+    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carros';
 }
 
 /*
@@ -154,20 +156,21 @@ carro.obterCor(); // Verde Musgo
 carro.obterMarcaModelo(); // Fiat
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPessoas(2); // Já temos 2 pessoas no carro.
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPessoas(4); // Só cabem mais 3 pessoas
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas(3); // Já temos 5 pessoas no carro.
+
 
 // Tire 4 pessoas do carro.
-?
+carro.adicionarPessoas(-4); // Já temos 1 pessoa no carro.
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10); // Só cabem mais 4 pessoas
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas // 1;
 ```
