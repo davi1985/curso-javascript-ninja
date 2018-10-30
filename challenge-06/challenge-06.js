@@ -74,8 +74,7 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
 */
 function convertToHex( color ) {
     var hexa;
-    switch ( color ) {
-        
+    switch ( color ) { 
         case 'red' :
             hexa = '#FF0000';
             break;
