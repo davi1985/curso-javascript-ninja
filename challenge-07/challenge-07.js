@@ -38,6 +38,11 @@ Agora mostre no console quantos itens tem o segundo array criado, com a frase:
 Utilizando a estrutura de repetição `while`, mostre no console todos os números
 pares entre 10 e 20, inclusive esses 2.
 */
+var i = 10;
+while(i>= 20) {
+	console.log(i);
+	i++;
+}
 console.log( 'Números pares entre 10 e 20:' );
 // ?
 

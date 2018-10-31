@@ -16,7 +16,6 @@ desafio.
 var teams = ['Barcelona', 'Juventus', 'Real Madri', 'Liverpool', 'Porto'];
 
 console.log( 'Times que estão participando do campeonato:', teams ); 
-
 /*
 Crie uma função chamada `showTeamPosition` com as seguintes características:
     - A função deve receber um número por parâmetro;
@@ -39,7 +38,6 @@ function showTeamPosition( position) {
     }
     return 'O time que está em '+ position +' lugar é o ' + teams[position -1] + '';
 }
-
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
@@ -59,7 +57,6 @@ while(i <= 30) {
     console.log(i);
     i++;
 }
-
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
     - A função recebe uma cor por parâmetro, do tipo string. Exemplo: "red";
