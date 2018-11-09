@@ -151,8 +151,8 @@
 	operationSignal = '-';
 	var subtraction = calculator( operationSignal );
 	if( subtraction ) {
-		number1 = 10;
-		number2 = 12;
+		number1 = 9;
+		number2 = 6;
 		console.log(showOperationMessage(operationSignal, number1, number2), subtraction(number1,number2));
 	} else {
 		console.log(showErrorMessage(operationSignal));
@@ -162,8 +162,8 @@
 	operationSignal = '*';
 	var multiplication = calculator( operationSignal );
 	if( multiplication ) {
-		number1 = 10;
-		number2 = 12;
+		number1 = 5;
+		number2 = 7;
 		console.log(showOperationMessage(operationSignal, number1, number2), multiplication(number1,number2));
 	} else {
 		console.log(showErrorMessage(operationSignal));
@@ -173,8 +173,8 @@
 	operationSignal = '/';
 	var division = calculator( operationSignal );
 	if( division ) {
-		number1 = 10;
-		number2 = 12;
+		number1 = 16;
+		number2 = 5;
 		console.log(showOperationMessage(operationSignal, number1, number2), division(number1,number2));
 	} else {
 		console.log(showErrorMessage(operationSignal));
@@ -184,8 +184,8 @@
 	operationSignal = '%';
 	var mod = calculator( operationSignal );
 	if( mod ) {
-		number1 = 10;
-		number2 = 12;
+		number1 = 5;
+		number2 = 2;
 		console.log(showOperationMessage(operationSignal, number1, number2), mod(number1,number2));
 	} else {
 		console.log(showErrorMessage(operationSignal));
