@@ -18,7 +18,9 @@
     */
     let $cronos = document.querySelector('[data-js="cronos"]');
     let timer;
+    
     const $btnStart = document.querySelector('[data-js="btn-start"]');
+    
     $btnStart.addEventListener('click', function() {
         timer = setInterval(() => {
             $cronos.value++;
