@@ -26,13 +26,16 @@
     });
 
     const $btnStop = document.querySelector('[data-js="btn-stop"]');
+    
     $btnStop.addEventListener('click', () => {
         clearInterval(timer);
     })
 
     const $btnReset = document.querySelector('[data-js="btn-reset"]');
+    
     $btnReset.addEventListener('click', () => {
         $cronos.value = 0;
+        clearInterval(timer);
     });
 
 
