@@ -165,17 +165,40 @@
   //   //   console.log(args);
   //   // })
   // }
-  function myFunction() {
-    Array.prototype.forEach.call(arguments, function(item, index) {
-      console.log(item);
-    });
-  }
-  myFunction(1,2,3,4,5,6,7,8);
+  // function myFunction() {
+  //   Array.prototype.forEach.call(arguments, function(item, index) {
+  //     console.log(item);
+  //   });
+  // }
+  // myFunction(1,2,3,4,5,6,7,8);
 
+  //debug
+  // palavra reservada para fazer debug -> debugger;
 
+  // function sum() {
 
+  //   return Array.prototype.reduce.call(arguments, function(accumulated, item) {
+  //     return accumulated + item;
+  //   });
+  // }
 
+  // console.log(sum(1,21,32,4));
 
+  // console.time('Calculando tempo do for');
+  // for(let i = 0; i < 10000; i++) {
+  //   console.log('calculando...');
+  // }
+  // console.timeEnd('Calculando tempo do for');
+
+  var arr = [
+    { item: 'Arroz', price: 'R$ 10'},
+    { item: 'Feijão', price: 'R$ 20'},
+    { item: 'Macarrao', price: 'R$ 12'},
+    { item: 'Carne', price: 'R$ 30'},
+    [a,b,c,d],
+  ];
+
+  console.table(arr);
 
 
 })(window, document);
