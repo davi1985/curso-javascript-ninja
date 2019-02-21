@@ -190,15 +190,41 @@
   // }
   // console.timeEnd('Calculando tempo do for');
 
-  var arr = [
-    { item: 'Arroz', price: 'R$ 10'},
-    { item: 'Feijão', price: 'R$ 20'},
-    { item: 'Macarrao', price: 'R$ 12'},
-    { item: 'Carne', price: 'R$ 30'},
-    [a,b,c,d],
-  ];
+  // var arr = [
+  //   { item: 'Arroz', price: 'R$ 10'},
+  //   { item: 'Feijão', price: 'R$ 20'},
+  //   { item: 'Macarrao', price: 'R$ 12'},
+  //   { item: 'Carne', price: 'R$ 30'},
+  //   [a,b,c,d],
+  // ];
 
-  console.table(arr);
+  // console.table(arr);
+
+  // eventos;
+
+  var $a = document.querySelector('[data-js="link"]');
+
+  function on(element, event, callback) {
+    document.querySelector(element)
+      .addEventListener(event, callback,false);
+  }
+
+  function off(element, event, callback) {
+    document.querySelector(element)
+      .removeEventListener(event, callback, false);
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
+    alert('cliclou no a');
+  }
+  on('[data-js="link"', 'click', handleClick);
+
+  off('[data-js="link"', 'click', handleClick);
+
+  on('data-js="span"', 'click', function(event) {
+    alert('click no span');
+  });
 
 
 })(window, document);

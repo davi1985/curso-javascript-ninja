@@ -58,11 +58,18 @@
 
   // verifica se o ultimo item é uma operação
   function isLastItemAnOperation(number) {
-    var operations = ['+','-','x','÷'];
+    var operations = getOperations();
     var lastItem = number.split('').pop();
     return operations.some(function(operator) {
       return operator === lastItem;
     });
+  }
+
+  function getOperations() {
+    return $buttonsOperations.map(function(button) {
+      return button.value
+    });
+    // ['+','-','x','÷'];
   }
 
   //remove o ultimo item se ele é um operador;
